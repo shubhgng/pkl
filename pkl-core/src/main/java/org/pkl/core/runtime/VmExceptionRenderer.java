@@ -64,8 +64,7 @@ public class VmExceptionRenderer {
     builder.append(
         URLEncoder.encode(exceptionToReport.toString(), StandardCharsets.UTF_8)
             .replaceAll("\\+", "%20"));
-
-    builder.append("\n\n");
+    
     renderException(exception, builder);
     builder.append('\n').append(Release.current().versionInfo()).append("\n\n");
 

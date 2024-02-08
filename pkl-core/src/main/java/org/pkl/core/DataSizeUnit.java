@@ -85,7 +85,6 @@ public strictfp enum DataSizeUnit {
   public long getBytes() {
     return bytes;
   }
-
   public String toString() {
     return symbol;
   }

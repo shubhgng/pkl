@@ -54,7 +54,8 @@ public final class IoUtils {
     } catch (Error e) {
       // best we can do for now
       // rely on caller to provide context, e.g., the requested module URI
-      if (e.getClass().getName().equals("com.oracle.svm.core.jdk.UnsupportedFeatureError")) {
+      //e.getClass().getName().equals("com.oracle.svm.core.jdk.UnsupportedFeatureError")
+      if (e.getClass() == UnsupportedFeatureError.class) {
         throw new IOException("Unsupported protocol: " + uri.getScheme());
       }
 
